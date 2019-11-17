@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.ejercicio1;
 
-public class PaquetePatagonia {
+public class PaquetePatagonia extends SuperPackage{
 
 
     public void getItinerario() {

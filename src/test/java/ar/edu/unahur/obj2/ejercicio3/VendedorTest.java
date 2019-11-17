@@ -1,36 +1,38 @@
 package ar.edu.unahur.obj2.ejercicio3;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
 public class VendedorTest {
 
-    private Vendedor principiante;
-    private Vendedor senior;
-    private Vendedor experto;
-
+     Vendedor Principiante;
+     Vendedor Senior;
+     Vendedor Experto;
 
     @BeforeMethod
     public void setUp() {
-        principiante = new Vendedor("PRINCIPIANTE");
-        senior = new Vendedor("SENIOR");
-        experto = new Vendedor("EXPERTO");
+        Principiante = new Vendedor();
+        Senior = new Vendedor();
+        Experto = new Vendedor();
     }
 
     @Test
     public void testComisionPrincipiante() {
-        assertEquals(principiante.comision(100), 10.0);
+        TipoVendedor tipoVendedor = new Principiante();
+        Assert.assertEquals(tipoVendedor.porcentajeComision(), 0.10);
     }
 
     @Test
     public void testComisionSenior() {
-        assertEquals(senior.comision(100), 20.0);
+
+        TipoVendedor tipoVendedor = new Senior();
+        Assert.assertEquals(tipoVendedor.porcentajeComision(), 0.20);
     }
 
     @Test
     public void testComisionExperto() {
-        assertEquals(experto.comision(100), 40.0);
+        TipoVendedor tipoVendedor = new Experto();
+        Assert.assertEquals(tipoVendedor.porcentajeComision(), 0.40);
     }
 }

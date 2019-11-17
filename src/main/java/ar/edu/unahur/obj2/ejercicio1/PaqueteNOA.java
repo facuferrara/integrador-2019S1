@@ -1,6 +1,6 @@
 package ar.edu.unahur.obj2.ejercicio1;
 
-public class PaqueteNOA {
+public class PaqueteNOA extends SuperPackage {
 
     public void itinerario() {
         print("Nombre: " + nombre());

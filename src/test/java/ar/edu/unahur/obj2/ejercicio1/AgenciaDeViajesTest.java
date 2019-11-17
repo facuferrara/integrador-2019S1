@@ -1,6 +1,7 @@
 package ar.edu.unahur.obj2.ejercicio1;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
@@ -24,4 +25,5 @@ public class AgenciaDeViajesTest {
     public void testCatalogoDePaquetes() {
         agenciaDeViajes.catalogoDePaquetes();
     }
+
 }
